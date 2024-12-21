@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: "FatFrank_Heavy";
+    src: url("./assets/fonnts.com-FatFrank_Heavy.otf") format("truetype");
+    font-weight: lighter;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Neue Haas Grotesk Display Pro 55 Roman";
+    src: url("./assets/neue-haas-grotesk-display-pro-cufonfonts/NeueHaasDisplayThin.ttf") format("truetype");
+    font-weight: lighter;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Jost";
+    src: url("./assets/Jost,Mulish,Raleway/Raleway/Raleway-VariableFont_wght.ttf") format("truetype");
+    font-weight: lighter;
+    font-style: normal;
+}
+  
+
+:root {
+--font-selector: Q1VTVE9NO05ldWUgSGFhcyBHcm90ZXNrIERpc3BsYXkgUHJvIDU1IFJvbWFu;
+--thick-font: "FatFrank_Heavy", sans-serif;
+--thin-font: "Neue Haas Grotesk Display Pro 55 Roman", sans-serif;
+--jost-font: "Jost", sans-serif;
+}
+
+body {
+    font-family: var(--thin-font);
+    font-size: var(--framer-font-size);
+}

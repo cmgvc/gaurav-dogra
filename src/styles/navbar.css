@@ -1,0 +1,15 @@
+.max-w-25 {
+    max-width: 12%;
+}
+
+.z-51 {
+    z-index: 51;
+}
+
+.name-btn {
+    padding: 7px 20px;
+    color: white;
+    border: 1px solid white;
+    border-radius: 27px;
+    cursor: pointer;
+}
