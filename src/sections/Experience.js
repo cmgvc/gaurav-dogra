@@ -175,7 +175,6 @@ export default function Experience() {
     };
     
     const sortedExperiences = experiences.sort((a, b) => {
-        console.log('hi');
         const dateA = parseYear(a.year);
         const dateB = parseYear(b.year);
         return dateB - dateA;

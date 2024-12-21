@@ -39,7 +39,7 @@ export default function About() {
                 
             </div>
         </div>
-        <div id="contact" className='contact z-[1]' >
+        <div className='contact z-[1]' >
                 <div className='contact-line mt-[15vh] text-white p-3 z-[1]'>
                 </div>
             </div>
