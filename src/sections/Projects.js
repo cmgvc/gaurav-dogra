@@ -68,21 +68,23 @@ function Projects() {
                     Leadership & Projects
                 </div>
             </div>
-            <button 
-                className="arrow-btn left-arrow" 
-                onClick={handlePrevious}
-                disabled={selectedProject === 0}>
-                <FaArrowLeft />
-            </button>
-            <button 
-                className="arrow-btn right-arrow" 
-                onClick={handleNext}
-                disabled={selectedProject === projects.length - 1}
-            >
-                <FaArrowRight />
-            </button>
+            <div className="flex mt-[17vh] z-[1]">
+                <button 
+                    className="arrow-btn left-arrow" 
+                    onClick={handlePrevious}
+                    disabled={selectedProject === 0}>
+                    <FaArrowLeft />
+                </button>
+                <button 
+                    className="arrow-btn right-arrow" 
+                    onClick={handleNext}
+                    disabled={selectedProject === projects.length - 1}
+                >
+                    <FaArrowRight />
+                </button>
+            </div>
             <div className="project-container relative flex justify-center h-[30vh] ml-[5vw] items-center">
-                <div className="project-info mt-4 text-white">
+                <div className="project-info text-white">
                     <h3>{projects[selectedProject].title}</h3>
                     <h4>{projects[selectedProject].organization}</h4>
                     <p>{projects[selectedProject].description}</p>

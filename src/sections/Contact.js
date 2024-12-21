@@ -5,7 +5,7 @@ export default function Contact() {
     return (
         <>
             <div id="contact" className='contact z-[1]' >
-                <div className='contact-line mt-[18vh] text-white p-3 z-[1]'>
+                <div className='contact-line mt-[27vh] text-white p-3 z-[1]'>
                     Contact
                 </div>
             </div>
