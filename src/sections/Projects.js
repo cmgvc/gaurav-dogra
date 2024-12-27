@@ -6,12 +6,27 @@ function Projects() {
     const [selectedProject, setSelectedProject] = useState(0);
     const [allProjects, setAllProjects] = useState([]);
 
+    const getEndDate = (duration) => {
+        const endDate = duration.split(' - ')[1];
+        if (endDate === 'Present') {
+            return new Date('9999-12-31');
+        }
+        
+        const [month, year] = endDate.split(' ');
+        const monthIndex = new Date(Date.parse(month + " 1, 2000")).getMonth();
+        return new Date(year, monthIndex);
+    };
+
     useEffect(() => {
         const fetchProjects = async () => {
             try {
                 const data = await getProjects();
-                console.log(data); // Debugging fetched data
-                setAllProjects(data);
+                const sortedProjects = [...data].sort((a, b) => {
+                    const dateA = getEndDate(a.duration);
+                    const dateB = getEndDate(b.duration);
+                    return dateB - dateA; 
+                });
+                setAllProjects(sortedProjects);
             } catch (error) {
                 console.error('Error fetching projects:', error);
             }
