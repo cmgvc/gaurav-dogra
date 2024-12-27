@@ -13,7 +13,7 @@ function Footer() {
             </div>
             <div className='flex flex-col text-right z-[1]'>
                 <p className='text-white'>© 2024 Gaurav Dogra</p>
-                <a href='https://gaurav-cms.vercel.app/' className='text-white hover:text-gray-300 underline'>Sign in to edit</a>
+                <a href="https://gaurav-cms.vercel.app/" target="_blank" rel="noopener noreferrer" className="text-white hover:text-gray-300 underline">Sign in to edit</a>
             </div>
         </div>
     )
