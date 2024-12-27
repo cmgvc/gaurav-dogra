@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Plus, Minus } from 'lucide-react';
+import { getExperiences } from '../tools/api';
 
 const TimelineItem = ({ year, title, subtitle, description, details, isLeft }) => {
     const [isExpanded, setIsExpanded] = useState(false);
@@ -70,6 +71,22 @@ const TimelineItem = ({ year, title, subtitle, description, details, isLeft }) =
 };
 
 export default function Experience() {
+    const [allExperiences, setExperiences] = useState([]);
+
+    useEffect(() => {
+        const getAllExperiences = async () => {
+            try {
+                getExperiences().then((data) => {
+                    console.log(data);
+                    setExperiences(data);
+                });
+            } catch (error) {
+                console.error(error);
+            }
+        }
+        getAllExperiences();
+    }, []);
+
     const experiences = [
         {
         year: "September 2024 - Present",
@@ -192,7 +209,7 @@ export default function Experience() {
                 <div className="relative">
                     <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gray-300"></div>
                     <div className="space-y-16">
-                        {sortedExperiences.map((exp, index) => (
+                        {allExperiences.map((exp, index) => (
                             <TimelineItem
                                 key={index}
                                 year={exp.year}
