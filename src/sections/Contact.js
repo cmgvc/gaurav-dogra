@@ -12,7 +12,7 @@ export default function Contact() {
             <div className='flex h-[30vh] mt-[12vh] justify-between'>
                 <div className='text-white mt-[13vh] ml-[3vw] '>
                     <p>Connect with me on LinkedIn</p>
-                    <a className='hover:text-gray-300' href='https://www.linkedin.com/in/gdogra1/' ><LinkedInIcon /></a>
+                    <a className='hover:text-gray-300' href='https://www.linkedin.com/in/gdogra1/' target="_blank" rel="noopener noreferrer"><LinkedInIcon /></a>
                 </div>
                 <div className='contact-container flex flex-col mt-4 text-white z-[1] mr-[6vw]'>
                     <h3>Get in touch</h3>

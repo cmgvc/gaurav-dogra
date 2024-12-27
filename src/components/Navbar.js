@@ -72,7 +72,7 @@ const Navbar = () => {
               <button onClick={() => handleScrollTo('projects')} className="text-white text-xl mr-[3rem] mt-[3vh] mb-[3vh] hover:text-gray-300 transition-colors">Projects</button>
               <button onClick={() => handleScrollTo('contact')} className="text-white text-xl mr-[3rem] mt-[3vh] mb-[3vh] hover:text-gray-300 transition-colors">Contact</button>
               <div className="flex ml-[4vw]">
-                <a href="https://www.linkedin.com/in/gdogra1/" className="text-white text-xl mr-[3rem] mt-[3vh] mb-[3vh] hover:text-gray-300 transition-colors">
+                <a href="https://www.linkedin.com/in/gdogra1/" className="text-white text-xl mr-[3rem] mt-[3vh] mb-[3vh] hover:text-gray-300 transition-colors" target="_blank" rel="noopener noreferrer">
                   <LinkedInIcon />
                 </a>
                 <a href="mailto:gaurav@dogra.com" className="text-white text-xl mr-[3rem] mt-[3vh] hover:text-gray-300 transition-colors">
@@ -101,7 +101,7 @@ const Navbar = () => {
             <button onClick={() => handleScrollTo('contact')} className="text-white text-4xl hover:text-gray-300 transition-colors">Contact</button>
           </div>
           <div className="flex mt-[6vh]">
-            <a href="https://www.linkedin.com/in/gdogra1/" className="text-white hover:text-gray-300">
+            <a href="https://www.linkedin.com/in/gdogra1/" className="text-white hover:text-gray-300" target="_blank" rel="noopener noreferrer">
               <LinkedInIcon />
             </a>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
