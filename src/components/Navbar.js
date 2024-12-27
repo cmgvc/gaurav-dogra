@@ -42,7 +42,7 @@ const Navbar = () => {
           <a
             onClick={() => handleScrollTo('home')}
             className={`transition-all duration-300 -mt-10 -ml-6 cursor-pointer ${
-              scrolled ? 'scale-[0.25] -mb-[11vh] -mt-[10vh] -ml-[4rem]' : 'scale-[0.7]'
+              scrolled ? 'scale-[0.32] -mb-[11vh] -mt-[10vh] -ml-[4rem]' : 'scale-[0.7]'
             }`}
           >
             <Logo />
