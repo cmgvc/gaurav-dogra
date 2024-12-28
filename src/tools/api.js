@@ -4,7 +4,6 @@ const url = 'https://portfolio-cms-ncqv.onrender.com';
 export const getExperiences = async () => {
     const response = await fetch(`${url}/experiences`);
     const data = await response.json();
-    console.log(data);
     return data;
 }
 

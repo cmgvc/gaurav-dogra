@@ -77,7 +77,6 @@ export default function Experience() {
         const getAllExperiences = async () => {
             try {
                 getExperiences().then((data) => {
-                    console.log(data);
                     setExperiences(data);
                 });
             } catch (error) {
