@@ -31,5 +31,6 @@
 
 body {
     font-family: var(--thin-font);
+    letter-spacing: 1px;
     font-size: var(--framer-font-size);
 }
