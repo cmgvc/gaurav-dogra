@@ -190,7 +190,7 @@ export default function Experience() {
         return new Date(endYear);
     };
     
-    const sortedExperiences = experiences.sort((a, b) => {
+    const sortedExperiences = allExperiences.sort((a, b) => {
         const dateA = parseYear(a.year);
         const dateB = parseYear(b.year);
         return dateB - dateA;
@@ -208,7 +208,7 @@ export default function Experience() {
                 <div className="relative">
                     <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gray-300"></div>
                     <div className="space-y-16">
-                        {allExperiences.map((exp, index) => (
+                        {sortedExperiences.map((exp, index) => (
                             <TimelineItem
                                 key={index}
                                 year={exp.year}

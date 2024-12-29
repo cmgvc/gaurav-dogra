@@ -17,7 +17,7 @@ export default function Contact() {
                 <div className='contact-container flex flex-col mt-4 text-white z-[1] mr-[6vw]'>
                     <h3>Get in touch</h3>
                     <p>For any business inquiries or just to say hi, feel free to reach out to me.</p>
-                    <a className='hover:text-gray-300' href="mailto:gaurav@dogra.com">gaurav@dogra.com</a>
+                    <a className='hover:text-gray-300' href="mailto:gaurav@dogra.ca">gaurav@dogra.ca</a>
                     <p className='mt-1'>(416) 388-8337</p>
                 </div>
             </div>
