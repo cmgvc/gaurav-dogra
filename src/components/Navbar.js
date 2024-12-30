@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { ReactComponent as Logo } from '../assets/gd-high-resolution-logo.svg';
+// import { ReactComponent as Logo } from '../assets/gd-high-resolution-logo.svg';
+import { ReactComponent as Logo } from '../assets/gd.svg';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import EmailIcon from '@mui/icons-material/Email';
 
@@ -42,7 +43,7 @@ const Navbar = () => {
           <a
             onClick={() => handleScrollTo('home')}
             className={`transition-all duration-300 -mt-10 -ml-6 cursor-pointer ${
-              scrolled ? 'scale-[0.3] -mb-[11vh] -mt-[10vh] -ml-[4rem]' : 'scale-[0.7]'
+              scrolled ? 'scale-[0.3] -mb-[11vh] -mt-[9vh] -ml-[4rem]' : 'scale-[0.7]'
             }`}
           >
             <Logo />
