@@ -48,8 +48,8 @@ function Projects() {
 
     return (
         <div>
-            <div className="flex justify-left z-[1]" id="projects">
-                <div className="experience-line mt-[6rem] ml-[5vw] text-white p-3 z-[1]">
+            <div className="flex justify-left z-[1] " id="projects">
+                <div className="experience-line mt-[6rem] ml-[5vw] text-[var(--text-color)] p-3 z-[1]">
                     Leadership & Projects
                 </div>
             </div>
@@ -69,24 +69,24 @@ function Projects() {
                     <FaArrowRight />
                 </button>
             </div>
-            <div className="project-container relative flex justify-center h-[30vh] ml-[5vw] items-center">
+            <div className="project-container relative flex  justify-center h-[30vh] ml-[5vw] items-center">
                 {allProjects.length > 0 ? (
-                    <div className="project-info text-white">
-                        <h3>{allProjects[selectedProject]?.title}</h3>
+                    <div className="project-info ">
+                        <h3 className='text-[var(--text-color)]'>{allProjects[selectedProject]?.title}</h3>
                         <h4>{allProjects[selectedProject]?.organization}</h4>
                         <p>{allProjects[selectedProject]?.description}</p>
                         <small>{allProjects[selectedProject]?.duration}</small>
                     </div>
                 ) : (
-                    <p className="text-white">No Projects</p>
+                    <p className="text-[var(--text-color)]">No Projects</p>
                 )}
             </div>
             
             <style jsx>{`
                 .arrow-btn {
                     background: none;
-                    border: 2px solid white;
-                    color: white;
+                    border: 2px solid var(--text-color);
+                    color: var(--text-color);
                     padding: 10px;
                     cursor: pointer;
                     transition: background-color 0.3s;
@@ -119,20 +119,20 @@ function Projects() {
                 }
                 .project-info h3 {
                     font-size: 1.5rem;
-                    color: white;
+                    color: var(--text-color);
                     margin-bottom: 10px;
                 }
                 .project-info h4 {
                     font-size: 1.2rem;
-                    color: white;
+                    color: var(--text-color);
                     margin-bottom: 8px;
                 }
                 .project-info p {
-                    color: white;
+                    color: var(--text-color);
                     margin-bottom: 8px;
                 }
                 .project-info small {
-                    color: white;
+                    color: var(--text-color);
                     font-size: 0.9rem;
                     display: block;
                 }

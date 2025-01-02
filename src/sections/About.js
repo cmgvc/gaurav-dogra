@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import '../styles/about.css';
 import MyImage from '../assets/headshot.jpeg';
 import { getAbout } from '../tools/api';
 
@@ -35,7 +34,7 @@ export default function About() {
 
     if (loading) {
         return (
-            <div className="flex justify-center items-center h-screen text-white">
+            <div className="flex justify-center items-center h-screen text-[var(--text-color)]">
                 Loading...
             </div>
         );
@@ -43,7 +42,7 @@ export default function About() {
 
     if (error) {
         return (
-            <div className="flex justify-center items-center h-screen text-white">
+            <div className="flex justify-center items-center h-screen text-[var(--text-color)]">
                 Error: {error}
             </div>
         );
@@ -52,27 +51,27 @@ export default function About() {
     return (
         <>
             <div className='flex justify-center z-[1]'>
-                <div className='about-line mt-[12rem] text-white p-3 z-[1]'>
+                <div className='about-line mt-[12rem] text-[var(--text-color)] p-3 z-[1]'>
                     Based in Toronto, Ontario
                 </div>
             </div>
             <div id="about" className='flex justify-left z-[1]'>
-                <div className='text-white p-3 z-[1] ml-[8vw] scale-[3] mt-[5vh]'>
+                <div className='text-[var(--text-color)] p-3 z-[1] ml-[8vw] scale-[3] mt-[5vh]'>
                     About
                 </div>
             </div>
             <div className="flex flex-row w-[80%] z-[1] text-right">
                 <div className="flex-1 flex flex-col justify-start z-[1] ml-[50vw] -mt-[12vh]">
-                    <p className="leading-relaxed text-white scale-[1.5] w-[32vw] mt-[5rem]">
+                    <p className="leading-relaxed text-[var(--text-color)] scale-[1.5] w-[32vw] mt-[5rem]">
                         {aboutData.description}
                     </p>
-                    <p className="leading-relaxed text-white scale-[1.5] w-[32vw] mt-[5rem]">
+                    <p className="leading-relaxed text-[var(--text-color)] scale-[1.5] w-[32vw] mt-[5rem]">
                         {aboutData.description2}
                     </p>
                 </div>
             </div>
             <div className='contact z-[1]'>
-                <div className='contact-line mt-[15vh] text-white p-3 z-[1]'>
+                <div className='contact-line mt-[15vh] text-[var(--text-color)] p-3 z-[1]'>
                 </div>
             </div>
             <div className="flex justify-left items-center z-[1] mt-[14vh] ml-[10vw]">
@@ -83,7 +82,7 @@ export default function About() {
                         className="w-full h-full object-cover"
                     />
                 </div>
-                <p className="leading-relaxed text-white scale-[1.5] w-[25rem] mt-[5rem] ml-[15vw]">
+                <p className="leading-relaxed text-[var(--text-color)] scale-[1.5] w-[25rem] mt-[5rem] ml-[15vw]">
                     {aboutData.hobbies}
                 </p>
             </div>

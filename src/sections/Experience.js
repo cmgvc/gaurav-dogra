@@ -10,15 +10,15 @@ const TimelineItem = ({ year, title, subtitle, description, details, isLeft }) =
         <div className="flex w-full relative justify-center">
             <div className={`w-[40%] ${isLeft ? 'pr-8' : 'pr-8 opacity-0'}`}>
                 <div className="text-right transform transition-transform duration-300">
-                    <div className="card bg-transparent border-t border-b border-white p-8 transition-all duration-300 hover:bg-[#ebebeb] group hover:translate-y-[-10px]">
-                        <h3 className={`text-xl font-bold ${isSchoolExperience ? 'text-[#77a3bd]' : 'text-blue-600'}`}>
+                    <div className="card bg-transparent border-t border-b border-[var(--text-color)] p-8 transition-all duration-300 hover:bg-[--exp-bkg-color] group hover:translate-y-[-10px]">
+                        <h3 className={`text-xl font-bold ${isSchoolExperience ? 'text-[var(--exp-school-text-color)]' : 'text-[var(--exp-text-color)]'}`}>
                             {title}
                         </h3>
-                        <div className="text-white group-hover:text-gray-600 mb-1">{year}</div>
-                        <div className="text-white group-hover:text-gray-500 font-medium mb-2">{subtitle}</div>
-                        <p className="text-white group-hover:text-gray-600">{description}</p>
+                        <div className="text-[var(--text-color)] group-hover:text-gray-600 mb-1">{year}</div>
+                        <div className="text-[var(--text-color)] group-hover:text-gray-500 font-medium mb-2">{subtitle}</div>
+                        <p className="text-[var(--text-color)] group-hover:text-gray-600">{description}</p>
                         <div className={`overflow-hidden transition-all duration-300 ${isExpanded ? 'max-h-96' : 'max-h-0'}`}>
-                            <div className="pt-4 text-white group-hover:text-gray-600">
+                            <div className="pt-4 text-[var(--text-color)] group-hover:text-gray-600">
                                 {details}
                             </div>
                         </div>
@@ -41,15 +41,15 @@ const TimelineItem = ({ year, title, subtitle, description, details, isLeft }) =
             </div>
             <div className={`w-[40%] ${!isLeft ? 'pl-8' : 'pl-8 opacity-0'}`}>
                 <div className="text-left duration-300">
-                    <div className="card bg-transparent border-t border-b border-white p-8 duration-300 hover:bg-[#ebebeb] group hover:translate-y-[-10px]">
-                        <h3 className={`text-xl font-bold ${isSchoolExperience ? 'text-[#77a3bd]' : 'text-blue-600'}`}>
+                    <div className="card bg-transparent border-t border-b border-[var(--text-color)] p-8 duration-300 hover:bg-[--exp-bkg-color] group hover:translate-y-[-10px]">
+                        <h3 className={`text-xl font-bold ${isSchoolExperience ? 'text-[var(--exp-school-text-color)]' : 'text-[var(--exp-text-color)]'}`}>
                             {title}
                         </h3>
-                        <div className="text-white group-hover:text-gray-600 mb-1">{year}</div>
-                        <div className="text-white group-hover:text-gray-500 font-medium mb-2">{subtitle}</div>
-                        <p className="text-white group-hover:text-gray-600">{description}</p>
+                        <div className="text-[var(--text-color)] group-hover:text-gray-600 mb-1">{year}</div>
+                        <div className="text-[var(--text-color)] group-hover:text-gray-500 font-medium mb-2">{subtitle}</div>
+                        <p className="text-[var(--text-color)] group-hover:text-gray-600">{description}</p>
                         <div className={`overflow-hidden transition-all duration-300 ${isExpanded ? 'max-h-96' : 'max-h-0'}`}>
-                            <div className="pt-4 text-white group-hover:text-gray-600">
+                            <div className="pt-4 text-[var(--text-color)] group-hover:text-gray-600">
                                 {details}
                             </div>
                         </div>
