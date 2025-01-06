@@ -7,11 +7,11 @@ const logos = {
   light: require('../assets/gd-light.svg').ReactComponent,
 };
 
-const Navbar = ({ theme }) => {
-  const Logo = theme ? logos.light : logos.dark;
-
+const Navbar = ({ isDarkMode, onThemeToggle }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  
+  const Logo = isDarkMode ? logos.dark : logos.light;
 
   useEffect(() => {
     const handleScroll = () => {
@@ -21,10 +21,6 @@ const Navbar = ({ theme }) => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-
-  useEffect(() => {
-    document.documentElement.setAttribute('data-theme', theme ? 'dark' : 'light');
-  }, [theme]);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -54,7 +50,7 @@ const Navbar = ({ theme }) => {
             onClick={() => handleScrollTo('home')}
             className={`transition-all duration-300 cursor-pointer ${
               scrolled 
-                ? 'scale-[0.3] -mb-[11vh] -mt-[9vh] -ml-[4rem]' 
+                ? 'scale-[0.3] -mb-[11vh] -mt-[10vh] -ml-[4rem]' 
                 : 'scale-[0.7] -mt-10 -ml-6'
             }`}
           >
@@ -62,28 +58,30 @@ const Navbar = ({ theme }) => {
           </a>
 
           {!scrolled ? (
-            <button
-              onClick={toggleMenu}
-              className="relative mr-[3rem] mt-[3rem] focus:outline-none cursor-pointer z-[1100]"
-            >
-              <div className="relative flex flex-col justify-center items-center w-6 h-6 cursor-pointer">
-                <span
-                  className={`w-full h-0.5 bg-[var(--text-color)] transition-all duration-300 ${
-                    isOpen ? 'absolute rotate-45' : 'mb-1.5'
-                  }`}
-                ></span>
-                <span
-                  className={`w-full h-0.5 bg-[var(--text-color)] transition-all duration-300 ${
-                    isOpen ? 'opacity-0' : 'mb-1.5'
-                  }`}
-                ></span>
-                <span
-                  className={`w-full h-0.5 bg-[var(--text-color)] transition-all duration-300 ${
-                    isOpen ? 'absolute -rotate-45' : ''
-                  }`}
-                ></span>
-              </div>
-            </button>
+            <div className="flex items-center">
+              <button
+                onClick={toggleMenu}
+                className="relative mr-[3rem] mt-[3rem] focus:outline-none cursor-pointer z-[1100]"
+              >
+                <div className="relative flex flex-col justify-center items-center w-6 h-6 cursor-pointer">
+                  <span
+                    className={`w-full h-0.5 bg-[var(--text-color)] transition-all duration-300 ${
+                      isOpen ? 'absolute rotate-45' : 'mb-1.5'
+                    }`}
+                  ></span>
+                  <span
+                    className={`w-full h-0.5 bg-[var(--text-color)] transition-all duration-300 ${
+                      isOpen ? 'opacity-0' : 'mb-1.5'
+                    }`}
+                  ></span>
+                  <span
+                    className={`w-full h-0.5 bg-[var(--text-color)] transition-all duration-300 ${
+                      isOpen ? 'absolute -rotate-45' : ''
+                    }`}
+                  ></span>
+                </div>
+              </button>
+            </div>
           ) : (
             <>
               {['about', 'experience', 'projects', 'contact'].map((item) => (
