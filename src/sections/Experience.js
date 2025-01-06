@@ -14,11 +14,11 @@ const TimelineItem = ({ year, title, subtitle, description, details, isLeft }) =
                         <h3 className={`text-xl font-bold ${isSchoolExperience ? 'text-[var(--exp-school-text-color)]' : 'text-[var(--exp-text-color)]'}`}>
                             {title}
                         </h3>
-                        <div className="text-[var(--text-color)] group-hover:text-gray-600 mb-1">{year}</div>
-                        <div className="text-[var(--text-color)] group-hover:text-gray-500 font-medium mb-2">{subtitle}</div>
-                        <p className="text-[var(--text-color)] group-hover:text-gray-600">{description}</p>
+                        <div className="text-[var(--text-color)]  mb-1">{year}</div>
+                        <div className="text-[var(--text-color)] font-medium mb-2">{subtitle}</div>
+                        <p className="text-[var(--text-color)] ">{description}</p>
                         <div className={`overflow-hidden transition-all duration-300 ${isExpanded ? 'max-h-96' : 'max-h-0'}`}>
-                            <div className="pt-4 text-[var(--text-color)] group-hover:text-gray-600">
+                            <div className="pt-4 text-[var(--text-color)] ">
                                 {details}
                             </div>
                         </div>
@@ -45,11 +45,11 @@ const TimelineItem = ({ year, title, subtitle, description, details, isLeft }) =
                         <h3 className={`text-xl font-bold ${isSchoolExperience ? 'text-[var(--exp-school-text-color)]' : 'text-[var(--exp-text-color)]'}`}>
                             {title}
                         </h3>
-                        <div className="text-[var(--text-color)] group-hover:text-gray-600 mb-1">{year}</div>
-                        <div className="text-[var(--text-color)] group-hover:text-gray-500 font-medium mb-2">{subtitle}</div>
-                        <p className="text-[var(--text-color)] group-hover:text-gray-600">{description}</p>
+                        <div className="text-[var(--text-color)]  mb-1">{year}</div>
+                        <div className="text-[var(--text-color)]  font-medium mb-2">{subtitle}</div>
+                        <p className="text-[var(--text-color)] ">{description}</p>
                         <div className={`overflow-hidden transition-all duration-300 ${isExpanded ? 'max-h-96' : 'max-h-0'}`}>
-                            <div className="pt-4 text-[var(--text-color)] group-hover:text-gray-600">
+                            <div className="pt-4 text-[var(--text-color)]">
                                 {details}
                             </div>
                         </div>
