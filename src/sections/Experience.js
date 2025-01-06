@@ -199,7 +199,7 @@ export default function Experience() {
     return (
         <>
         <div className='flex justify-left z-[1]' id='experience'>
-            <div className='experience-line mt-[12rem] ml-[5vw] text-white p-3 z-[1]'>
+            <div className='experience-line mt-[12rem] ml-[5vw] text-[var(--text-color)] p-3 z-[1]'>
                 Experience
             </div>
         </div>
